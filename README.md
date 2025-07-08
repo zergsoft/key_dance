@@ -24,8 +24,7 @@ Secrets and keys are stored SOPS encrypted in a VCS.  The encryption key for eac
 To use a secret, the consumer downloads the secret file and decrypts it with their private key or via a KMS provided key.
 Adding a secret consumer to the organization requires decrypting the key for each secret file, and adding a copy of the key encrypted with the new consumers pub key.
 
-Consumers use 
-Each consumer of the secrets (developers, servers, CI systems etc) 
+Each consumer of the secrets (developers, servers, CI systems etc) has either a key pair or access to a KMS (via IAM?).  These keys allow them to decrypt the secrets to which they have access.
 
 ## Issues
 
